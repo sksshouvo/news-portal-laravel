@@ -9,7 +9,7 @@
                   <div class="footer-widget-area mt-80">
                   <!-- Footer Logo -->
                   <div class="footer-logo">
-                      <a href="index.php"><img src="{{Storage::url('app/public/footer_logo.png')}}" alt="footer_logo"></a>
+                      <a href="{{ url('./') }}"><img src="{{Storage::url('app/public/footer_logo.png')}}" alt="footer_logo"></a>
                   </div>
                 </div>
                 </div>

@@ -97,10 +97,7 @@ $dateConverter  =  new  BnDateTimeConverter();
                               <!-- Nav Start -->
                               <div class="classynav">
                                   <ul>
-                                      <li {{{(strpos(Request::url(), 'index'))?"class=active":""}}} >
-                                          <a href="<?=$_SERVER['PHP_SELF']?>">হোম</a>
-                                        </li>
-                                      
+                                      <li {{{(strpos(Request::url(), 'index'))?"class=active":""}}} ><a href="{{ url('./') }}">হোম</a></li>
                                       @php
                                       $all_category = App\category::where('status', '=', 1)->get();
                                       @endphp
@@ -214,7 +211,7 @@ $dateConverter  =  new  BnDateTimeConverter();
                                       </li>  
                                       @endforeach
                                      
-                                      <li><a class="btn btn-danger" href="/public/news_admin/login"l id="login_button" style="height:39px;">Login</a></li> 
+                                      <li><a class="btn btn-danger" href="{{ url('login')}}"l id="login_button" style="height:39px;">Login</a></li> 
                                   </ul>
                               </div>
                               <!-- Nav End -->

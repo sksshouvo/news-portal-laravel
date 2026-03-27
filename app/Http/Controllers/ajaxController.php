@@ -89,7 +89,7 @@ class ajaxController extends Controller
     }
 
     public function get_traffic_data(Request $request){
-     $site_traffic_data =DB::table('visitors')->where(DB::raw('YEAR(created_at)'), $request['year'])
+     $site_traffic_data = DB::table('visitors')->where(DB::raw('YEAR(created_at)'), $request['year'])
     ->select(DB::raw('MONTHNAME(created_at) as month_name, sum(visit_count) as all_visitors'))->groupby('month_name')
     ->get();
     return $site_traffic_data;

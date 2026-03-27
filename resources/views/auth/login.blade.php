@@ -14,10 +14,6 @@ date_default_timezone_get();
                 <div class="card-body">
                     <form method="POST" action="{{ route('login') }}">
                         @csrf
-						<div class="col-sm-12">
-                        <button class="btn btn-danger btn-block" onClick="generate_a_user()" type="button">Click To Get Test User</button>
-                        <br>
-                        </div>
                         <div class="form-group row">
                             <label for="email" class="col-sm-4 col-form-label text-md-right">{{ __('E-Mail Address') }}</label>
 

@@ -56,7 +56,7 @@ $alt[] =  $at->tags;
 <div class="container">
     <nav aria-label="breadcrumb">
         <ol class="breadcrumb">
-            <li class="breadcrumb-item"><a href="../index.php">Home</a></li>
+            <li class="breadcrumb-item"><a href="{{ url('./') }}">Home</a></li>
             <li class="breadcrumb-item"><a
                     href="../news_categories/{{$full_news_info->category_id}}">{{$full_news_info->category}}</a></li>
             <li class="breadcrumb-item active" aria-current="page">{{$full_news_info->post_title_bng}}</li>

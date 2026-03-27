@@ -1,9 +1,13 @@
 @extends('dashboard/includes/main_app')
 @php
+$mon_name[] = NULL;
+$count[] = NULL;
+
 foreach( $site_traffic_data as $sd){
-$mon_name[] =  $sd->month_name;
-$count[] = $sd->all_visitors;
+    $mon_name[] =  $sd->month_name;
+    $count[] = $sd->all_visitors;
 }
+
 $name = json_encode($mon_name);
 $all_count = json_encode($count);
 $route_name = explode('.',Route::currentRouteName());
